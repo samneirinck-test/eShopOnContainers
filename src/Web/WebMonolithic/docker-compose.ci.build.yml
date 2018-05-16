@@ -2,7 +2,7 @@ version: '2'
 
 services:
   ci-build:
-    image: microsoft/aspnetcore-build:1.0-1.1
+    image: microsoft/aspnetcore-build:1.0-1.1@sha256:733e10e2d3cc20c82825012aae17204640f46bd2f716f53c2d3e57d71dd32655
     volumes:
       - .:/src
     working_dir: /src

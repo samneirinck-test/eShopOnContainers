@@ -115,18 +115,18 @@ services:
       - rabbitmq
 
   sql.data:
-    image: microsoft/mssql-server-windows-developer
+    image: microsoft/mssql-server-windows-developer:latest@sha256:a3e77eb7ac136bf419269ab6a3f3387df5055d78b2b6ba2e930e1c6312b50e07
   
   nosql.data:
-    image: mongo:windowsservercore
+    image: mongo:windowsservercore@sha256:fd09cb2c96c9d746194d59f23fa9440b7b2aa7b41e69302a372869e929b11706
 
   basket.data:
-    image: redis:nanoserver
+    image: redis:nanoserver@sha256:0504a89bfa3ed423a4537e20579434e08058043537822c8578c98ac71ef971bf
     ports:
         - "6379:6379"
 
   rabbitmq:
-    image: spring2/rabbitmq
+    image: spring2/rabbitmq:latest@sha256:a90c6352281163301c04b38b1154d6df63e806ecac0386163854c8dbcc02fc1a
     ports:
       - "15672:15672"    
       - "5672:5672"
