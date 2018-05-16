@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore:2.0.5@sha256:3dd91dfc75309d7b9b03e7ce2b5537fd0a8a51c74ba5af31f4688a600746be17 AS base
+FROM microsoft/aspnetcore:2.0.8@sha256:9fa051d41ecd1b417edc30bd6ba08dfd76566c5de5acdc327ec1c78396329272 AS base
 WORKDIR /app
 EXPOSE 80
 
