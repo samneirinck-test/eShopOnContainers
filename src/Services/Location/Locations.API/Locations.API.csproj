@@ -6,7 +6,7 @@
     <UserSecretsId>aspnet-Locations.API-20161122013619</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.2.1" />
     <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.5.1" />
     <PackageReference Include="Microsoft.ApplicationInsights.Kubernetes" Version="1.0.0-beta6" />
