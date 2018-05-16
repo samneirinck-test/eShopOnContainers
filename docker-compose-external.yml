@@ -2,17 +2,17 @@ version: '3.4'
 
 services:
   sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
+    image: microsoft/mssql-server-linux:2017-latest@sha256:b5d494d104394b8c1f451406f4062ab711add3032af52241140b7e27a01d8851
 
   basket.data:
-    image: redis
+    image: redis:latest@sha256:fc13b47aca9b5b53f625efe91bcd5cc44c637e80a81e5b223d5a98a6eac7ceb2
     ports:
       - "6379:6379"
 
   rabbitmq:
-    image: rabbitmq
+    image: rabbitmq:latest@sha256:2652a884128ec43a9d737e00f26432f2782d3076604cc455794a8c0ba4315c86
     ports:
       - "5672:5672"
   
   nosql.data:
-    image: mongo
+    image: mongo:latest@sha256:c6d2b2f8c054210db26b492bab81ffab171ee54eb58925fa98fabb4faca3a9cb

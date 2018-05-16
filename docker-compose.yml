@@ -106,16 +106,16 @@ services:
       - rabbitmq
 
   sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
+    image: microsoft/mssql-server-linux:2017-latest@sha256:b5d494d104394b8c1f451406f4062ab711add3032af52241140b7e27a01d8851
 
   nosql.data:
-    image: mongo
+    image: mongo:latest@sha256:c6d2b2f8c054210db26b492bab81ffab171ee54eb58925fa98fabb4faca3a9cb
 
   basket.data:
-    image: redis:alpine
+    image: redis:alpine@sha256:aab35d6ec4c49ef5c1674f0582eeb2f6e90ee0fd3010d8a806d8833f36cc0525
       
   rabbitmq:
-    image: rabbitmq:3-management-alpine
+    image: rabbitmq:3-management-alpine@sha256:c093e112d00491010c649b0453562b24c6b4ac87ad25426b739053f9efb17b8c
 
   mobileshoppingapigw:
     image: eshop/ocelotapigw:${TAG:-latest}

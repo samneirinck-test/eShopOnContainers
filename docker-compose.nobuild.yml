@@ -2,31 +2,31 @@ version: '3.4'
 
 services:
   basket.api:
-    image: eshop/basket.api
+    image: eshop/basket.api:latest@sha256:ddefaada6d2de458142183bd86d82fe0b7f951612685eb32c1f0b265140fa9b5
     depends_on:
       - basket.data
       - identity.api
       - rabbitmq
 
   catalog.api:
-    image: eshop/catalog.api
+    image: eshop/catalog.api:latest@sha256:bce5165574757e3546e6fb818d3b4cd2b9b6e8c924369e23832f6df042a4f2f1
     depends_on:
       - sql.data
       - rabbitmq
 
   identity.api:
-    image: eshop/identity.api
+    image: eshop/identity.api:latest@sha256:76e1d93045463a41a7d4d4622f43727ba238f0f5eee4aab89f80e25fa42de0d6
     depends_on:
       - sql.data
 
   ordering.api:
-    image: eshop/ordering.api
+    image: eshop/ordering.api:latest@sha256:06d78d9b637b74b2b47cad8bccd26f4d9b96a8534b629fb3e745fb1f076baded
     depends_on:
       - sql.data
       - rabbitmq
 
   marketing.api:
-    image: eshop/marketing.api   
+    image: eshop/marketing.api:latest@sha256:454c2ca6cb25ea94fcc3b78ffd724b456a3d385bd2a4980bae2d0f33bb6f73a5   
     depends_on:
       - sql.data
       - nosql.data
@@ -34,7 +34,7 @@ services:
       - rabbitmq      
 
   webspa:
-    image: eshop/webspa
+    image: eshop/webspa:latest@sha256:a3ae25865d10ae2681be4c7173877e34b6857c39eed4246634574d20ffee9616
     depends_on:
       - catalog.api
       - ordering.api
@@ -43,7 +43,7 @@ services:
       - marketing.api
 
   webmvc:
-    image: eshop/webmvc  
+    image: eshop/webmvc:latest@sha256:cf52cdb7251789e52485e0f4e458c56f1c8fb728bda6e2e111dd635579364a7d  
     depends_on:
       - catalog.api
       - ordering.api
@@ -52,32 +52,32 @@ services:
       - marketing.api
 
   webstatus:
-    image: eshop/webstatus
+    image: eshop/webstatus:latest@sha256:597f0c5757f6c3d87c9ba22f70ad070f6eb0220671f6877e9ebe65cfdcb4f4fd
     
   payment.api:
-    image: eshop/payment.api
+    image: eshop/payment.api:latest@sha256:88e21f0867fa23833c4cd7e8ba7caf9f511f6bc441a2f8f179cfad420bc32b62
     depends_on:
       - rabbitmq         
 
   locations.api:
-    image: eshop/locations.api
+    image: eshop/locations.api:latest@sha256:2469ec7ab7abe183bc7b268e0fa016f92aa04ecadd5f7e1ab02ee2e24011d235
     depends_on:
       - nosql.data
       - rabbitmq
 
   sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
+    image: microsoft/mssql-server-linux:2017-latest@sha256:b5d494d104394b8c1f451406f4062ab711add3032af52241140b7e27a01d8851
   
   nosql.data:
-    image: mongo
+    image: mongo:latest@sha256:c6d2b2f8c054210db26b492bab81ffab171ee54eb58925fa98fabb4faca3a9cb
   
   basket.data:
-    image: redis
+    image: redis:latest@sha256:fc13b47aca9b5b53f625efe91bcd5cc44c637e80a81e5b223d5a98a6eac7ceb2
     ports:
       - "6379:6379"
 
   rabbitmq:
-    image: rabbitmq:3-management
+    image: rabbitmq:3-management@sha256:ba1c4c819aad3bfa28ad2b826d680a4d6390273788e3350901b2778d12822ef1
     ports:
       - "5672:5672"
 
